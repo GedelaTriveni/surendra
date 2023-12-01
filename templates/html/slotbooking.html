@@ -1,0 +1,25 @@
+{% extends 'html/base4.html' %}
+{% block title %}Slotbooking{% endblock %}
+{% block content %}
+{% load static %}
+<body style="background-image: url('{% static 'images/petr-sevcovic-qE1jxYXiwOA-unsplash.png' %}') ; background-size: 100%;">
+</body>
+<div class="container mt-4">
+  <div class="card col-md-4 mx-auto shadow-lg border border-success">
+    <div class="card-body">
+      <h4>Allot Slot</h4>
+      <form method="post">
+        {% csrf_token %}
+        {% for i in r %}
+          {{i}}
+        {% endfor %}
+        <div class="row">
+          <div class="col">
+           <input type="submit" value="Allot" class="btn btn-success form-control">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% load static %}
+<nav>
+<ul>
+<li class="nav-item">
+<a class="nav-link {% if request.path == '/' %}active{% endif %}" href="{% url 'hm' %}">HOME</a>
+</li>
+</li>
+<li class="nav-item">
+<a class="nav-link {% if request.path == '/upload/' %}active{% endif %}" href="{% url 'up' %}">UPLOAD</a>
+</li>
+</li>
+</ul>
+</nav>

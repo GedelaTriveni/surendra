@@ -1,0 +1,24 @@
+{% extends 'html/base2.html' %}
+{% block title %}Upload{% endblock %}
+{% block content %}
+{% load static %}
+<body style="background-image: url('{% static 'images/petr-sevcovic-qE1jxYXiwOA-unsplash.png' %}') ; background-size: 100%;">
+<div class="container mt-4">
+  <div class="card col-md-4 mx-auto shadow-lg border border-success">
+    <div class="card-body">
+      <h4>Form Is Avaliable</h4>
+      <form method="post">
+        {% csrf_token %}
+        {% for i in t %}
+          {{i}}
+        {% endfor %}
+        <div class="row">
+          <div class="col">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfrcQ3_2E-SDXt64MEgvuRbb2Qeq6qbL5HAmTHha_3Cyn8mfg/viewform?usp=sf_link" class="btn btn-warning form-control">Upload Video</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

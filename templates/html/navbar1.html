@@ -1,0 +1,32 @@
+{% load static %}
+<nav>
+<ul>
+<li class="nav-item">
+        <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="{% url 'hm' %}">HOME</a>
+      </li>
+</li>
+      <li class="nav-item">
+        <a class="nav-link {% if request.path == '/abt/' %}active{% endif %}" href="{% url 'ab' %}">ABOUT</a>
+      </li>
+</li>
+      <li class="nav-item">
+        <a class="nav-link {% if request.path == '/menu/' %}active{% endif %}" href="{% url 'mn' %}">MENU</a>
+      </li>
+</li>
+</li><li class="nav-item">
+<a class="nav-link {% if request.path == '/shop/' %}active{% endif %}" href="{% url 'sh' %}">SHOP</a>
+</li>
+<li class="nav-item">
+<a class="nav-link {% if request.path == '/table/' %}active{% endif %}" href="{% url 'ta' %}">TABLEBOOKING</a>
+</li>
+</li>
+      <li class="nav-item">
+        <a class="nav-link {% if request.path == '/reg/' %}active{% endif %}" href="{% url 'rg' %}">REGISTRATION</a>
+      </li>
+</li>
+<li class="nav-item">
+<a class="nav-link {% if request.path == '/page/' %}active{% endif %}" href="{% url 'pa' %}">SLOTS</a>
+</li>
+</li>
+</ul>
+</nav>

@@ -1,0 +1,33 @@
+{% extends 'html/base1.html' %}
+{% block title %}Menu{% endblock %}
+{% block content %}
+{% load static %}
+<body style="background-image: url('{% static 'images/order.png' %}') ; background-size: 100%;">
+</body>
+<section class="about-section">
+    <article>
+      <h1>FOR ONLINE BOOKING
+      </h1>
+            <h4>
+              Contanct 9213567890, delivery timings 9:00AM-12:00AM.
+            </h4>
+    </article>
+  </section>
+  <style>
+    .about-section h1{
+      text-align: center;
+      color: yellow;
+       margin: auto;
+      width: 1240px;
+      padding: 50px;
+    }
+    .about-section h4{
+      text-align: center;
+      color: darkblue;
+      font-size: 20px;
+      margin: auto;
+      width: 640px;
+      padding: 50px;
+    }
+  </style>
+{% endblock %}

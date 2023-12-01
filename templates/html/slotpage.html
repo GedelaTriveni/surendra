@@ -1,0 +1,48 @@
+{% extends 'html/base1.html' %}
+{% block title %}Slot Page{% endblock %}
+{% block content %}
+{% load static %}
+<body style="background-image: url('{% static 'images/petr-sevcovic-qE1jxYXiwOA-unsplash.png' %}') ; background-size: 100%;">
+</body>
+<center><h1> Allotted Slots</h1></center>
+<center>
+<table>
+  <thead>
+    <tr>
+      <td><center>Slot No</center></td>
+      <td><center>Name</center></td>
+      <td><center>Mail</center></td>
+    </tr>
+  </thead>
+    {% for i in queryset %}
+    <tbody>
+      <tr>
+        <td><center>{{forloop.counter}}</center></td>
+        <td><center>{{ i.name }}</center></td>
+        <td><center>{{ i.mail }}</center></td>
+      </tr>
+    </tbody>
+    {% endfor %}
+</table> 
+</center>
+<style>
+  table, thead, tbody,tr,td{
+    border: 5px solid #B0DAFF;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    width: 340px;
+    padding: 1px;
+  }
+  thead, tbody, tr, td{
+    background-color: white;
+  }
+  h1{
+     color: white;
+     margin-left: auto;
+    margin-right: auto;
+    width: 340px;
+    padding: 30px;
+  }
+</style>
+{% endblock %}

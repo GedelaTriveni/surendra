@@ -1,0 +1,35 @@
+{% extends 'html/base1.html' %}
+{% block title %}About{% endblock %}
+{% block content %}
+{% load static %}
+<body style="background-image: url('{% static 'images/OIP.png' %}') ; background-size: 100%;">
+</body>
+<section class="about-section">
+    <article>
+      <h1>OUR STORY
+      </h1>
+            <h4>
+              ROBO KITCHEN is simply dummy text of the printingand typesetting industry lorem Ipsum has been the
+              industrys standard dummy text ever since the when an unknown printer took a galley of type and scrambled
+              it to make a type specimen book It has survived not only five centuries, but also the leap into.
+            </h4>
+    </article>
+  </section>
+  <style>
+    .about-section h1{
+      text-align: center;
+      color: luxgreen;
+       margin: auto;
+      width: 1240px;
+      padding: 40px;
+    }
+    .about-section h4{
+      text-align: center;
+      color: luxgreen;
+      font-size: 20px;
+      margin: auto;
+      width: 640px;
+      padding: 10px;
+    }
+  </style>  
+{% endblock %}
